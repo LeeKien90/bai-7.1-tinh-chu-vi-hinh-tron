@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính diện tích hình tròn</title>
+</head>
+<body>
+<label>Bán kính:</label>
+<input id="radius" type="text">
+<button onclick="dienTichVaChuVi()">Tính diện tích và chu vi</button>
+<h1 id="chuvi"></h1><br>
+<h1 id="dientich"></h1>
+
+<script>
+  function dienTichVaChuVi() {
+    let radius = document.getElementById('radius').value;
+    let chuVi = 2*Math.PI*radius;
+    let dienTich = Math.PI*Math.pow(radius,2);// pow(radius,2) là radius mũ 2
+    document.getElementById('chuvi').innerHTML = 'Chu vi hình tròn: ' + chuVi;
+    document.getElementById('dientich').innerHTML = 'Diện tích hình tròn: ' + dienTich;
+  }
+</script>
+</body>
+</html>
